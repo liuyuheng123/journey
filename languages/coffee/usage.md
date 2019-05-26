@@ -1,5 +1,54 @@
+# Types
+## Object
+```coffeescript
+singers = {Jagger: "Rock", Elvis: "Roll"}
+```
 
 
+# Workflows
+
+## Loops
+```coffeescript
+# Eat lunch.
+eat = (food) -> "#{food} eaten."
+eat food for food in ['toast', 'cheese', 'wine']
+
+# Fine five course dining.
+courses = ['greens', 'caviar', 'truffles', 'roast', 'cake']
+menu = (i, dish) -> "Menu Item #{i}: #{dish}" 
+menu i + 1, dish for dish, i in courses
+
+# Health conscious meal.
+foods = ['broccoli', 'spinach', 'chocolate']
+eat food for food in foods when food isnt 'chocolate'
+
+```
+
+## Functions
+```coffeescript
+module.exports = (robot) ->
+
+  # Any message that contains "badger" will trigger the following function
+  robot.hear /badger/i, (res) ->
+
+    # res.message is a SlackTextMessage instance that represents the incoming message Hubot just heard
+    robot.logger.debug "Received message #{res.message.text}"
+```
+- optional list of parameters in parentheses
+- an arrow
+- and the function body
+    ```coffeescript
+    square = (x) -> x * x
+    cube   = (x) -> square(x) * x
+    ```
+- default values for arguments, will be used if the incoming argument is missing (undefined)
+    ```coffeescript
+    fill = (container, liquid = "coffee") ->
+      "Filling the #{container} with #{liquid}..."
+    ```
+
+
+# Modules
 ## module.exports
 https://blog.csdn.net/xqnode/article/details/60610885
 
@@ -20,53 +69,9 @@ var app = require('./app.js');
 app.sayName('hello');//hello
 ```
 
-## module.exports = (robot) ->
-```coffeescript
-module.exports = (robot) ->
 
-  # Any message that contains "badger" will trigger the following function
-  robot.hear /badger/i, (res) ->
-
-    # res.message is a SlackTextMessage instance that represents the incoming message Hubot just heard
-    robot.logger.debug "Received message #{res.message.text}"
-```
-### coffeescript functions
-- optional list of parameters in parentheses
-- an arrow
-- and the function body
-    ```coffeescript
-    square = (x) -> x * x
-    cube   = (x) -> square(x) * x
-    ```
-- default values for arguments, will be used if the incoming argument is missing (undefined)
-    ```coffeescript
-    fill = (container, liquid = "coffee") ->
-      "Filling the #{container} with #{liquid}..."
-    ```
-## Object
-```coffeescript
-singers = {Jagger: "Rock", Elvis: "Roll"}
-```
-
-## Loops
-```coffeescript
-# Eat lunch.
-eat = (food) -> "#{food} eaten."
-eat food for food in ['toast', 'cheese', 'wine']
-
-# Fine five course dining.
-courses = ['greens', 'caviar', 'truffles', 'roast', 'cake']
-menu = (i, dish) -> "Menu Item #{i}: #{dish}" 
-menu i + 1, dish for dish, i in courses
-
-# Health conscious meal.
-foods = ['broccoli', 'spinach', 'chocolate']
-eat food for food in foods when food isnt 'chocolate'
-
-```
-
-## Classes
-### 创建与实例话
+# Classes
+## 创建与实例化
 ```coffeescript
 class Animal
   constructor: (@name) ->
@@ -91,6 +96,20 @@ sam.move()
 tom.move()
 ```
 
+
+# I/O
+## read file
+```coffeescript
+fs = require 'fs'
+config = 'test.txt'
+
+foo = ->
+  fs.readFileSync config, 'utf8'
+
+console.log foo()
+```
+
+# Exceptions
 ## try/catch
 ```coffeescript
 try
@@ -101,3 +120,5 @@ catch error
 finally
   cleanUp()
 ```
+
+
