@@ -1,7 +1,3 @@
-https://www.jianshu.com/p/656536ca6645
-
-https://github.com/windyrobin/iFrame/blob/master/style.md
-
 # Indent
 2 spaces
 

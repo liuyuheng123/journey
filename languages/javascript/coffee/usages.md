@@ -20,6 +20,115 @@ singers = {Jagger: "Rock", Elvis: "Roll"}
 
 
 # Workflows
+## Operators
+### Comparison Operators
+- ==: strict comparison operator of JavaScript ===, returns true, only if both the value and datatypes of them are equal, else it returns false.
+- !=
+- \>, <, >=, <=
+```coffeescript
+console.log("\n[==]")
+if 1 == 1 then console.log "1 == 1"
+if 'abc' == 'abc' then console.log "abc == abc"
+
+console.log("\n[!=]")
+if 1 != 0 then console.log "1 != 0"
+if 'A' != 'B' then console.log "A != B"
+
+console.log("\n[>,<,>=,<=]")
+if 1 > 0 then console.log "1 > 0"
+if 'B' > 'A' then console.log "B > A"
+```
+
+### The Existential Operator '?'
+`?` returns true unless a variable is null or undefined or undeclared.
+```coffeescript
+console.log("\n[?]")
+verify_name = name?
+console.log(verify_name) # false
+
+name = "Henry"
+verify_name = name?
+console.log(verify_name) # true
+
+speed = 15 unless speed?
+console.log(speed) # 15
+
+speed = 0
+speed ?= 15
+console.log(speed) # 0
+
+footprints = yeti ? "bear"
+console.log(footprints) # "bear"
+```
+
+- [ ] Chained Comparisons
+- [ ] Aliases
+
+
+
+### Logical Operators
+- &&
+- ||
+- !
+```coffeescript
+console.log("\n[&&]")
+if 2 != 0 && 2 != 1 then console.log "2 != 0 && 2 != 1"
+
+console.log("\n[||]")
+if 1 == 0 || 1 == 1 then console.log "1 == 0 || 1 == 1"
+
+console.log("\n[!]")
+if ! (1 == 0) then console.log "! (1 == 0)"
+```
+
+## Conditions
+- if
+- if ... else
+- if ... else if ... else: from javascript
+- unless: means if not
+- then: one-liner
+- postfix if/unless
+- ternary operator
+- switch: Switch/When/Else
+```coffeescript
+console.log("[if]")
+if 1 == 1
+  console.log("if 1 == 1")
+
+console.log("\n[else]")
+if 1 == 0
+  console.log("1 == 0")
+else
+  console.log("else 1 == 0")
+
+console.log("\n[else if]")
+if 1 == 0
+  console.log("1 == 0")
+else if 1 == 1
+  console.log("else if 1 == 1")
+else
+  console.log("1 != 0 and 1 != 1")
+
+console.log("\n[unless]")
+unless 1 == 0
+  console.log "unless 1 == 0"
+
+console.log("\n[postfix if]")
+console.log "postfix if 1 == 1" if 1 == 1
+
+console.log("\n[postfix unless]")
+console.log "postfix unless 1 == 0" unless 1 == 0
+
+console.log("\n[ternary operator]")
+if 1 == 0 then console.log "ternary operator 1 == 1" else console.log "ternary operator 1 == 0"
+
+console.log("\n[swtich/when/else]")
+num = 0
+switch num
+  when 2 then console.log("num == 2")
+  when 1 then console.log("num == 1")
+  else console.log("num != 2, 1")
+```
 
 ## Loops
 ```coffeescript
@@ -188,7 +297,7 @@ Use extends keyword.
 class Add
    a = 20; b = 30
    
-   addition:->
+   addition: ->
      console.log "Sum of the two numbers is :"+(a+b) 
 
 class My_class extends Add
