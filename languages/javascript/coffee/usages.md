@@ -1,4 +1,18 @@
 # Types
+## 判断类型
+https://www.cnblogs.com/a546558309/p/3608194.html
+
+```coffeescript
+typeof 2                # number
+typeof null             # object
+typeof {}               # object
+typeof []               # object
+typeof (function(){})   # function
+typeof undefined        # undefined
+typeof '222'            # string
+typeof true             # boolean
+```
+
 ## Object
 ```coffeescript
 singers = {Jagger: "Rock", Elvis: "Roll"}
@@ -25,6 +39,14 @@ eat food for food in foods when food isnt 'chocolate'
 ```
 
 ## Functions
+### Define
+`function_name = -> function_body`
+
+- `->` is compiled in to `(function() {});`
+- It is not mandatory to use the return keyword in CoffeeScript. Every function in CoffeeScript returns the last statement in the function automatically.
+
+
+
 ```coffeescript
 module.exports = (robot) ->
 
@@ -108,6 +130,20 @@ foo = ->
 
 console.log foo()
 ```
+
+## read line by line
+https://nodejs.org/api/readline.html
+
+```coffeescript
+lineReader = require('readline').createInterface({
+      input: require('fs').createReadStream(hosts)
+    });
+
+lineReader.on 'line', (line) ->
+  robot.logger.info "Line from file: #{line}"
+```
+解释
+- lineReader.on: Event: 'line'
 
 # Exceptions
 ## try/catch
