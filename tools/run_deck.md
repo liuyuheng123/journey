@@ -3,14 +3,16 @@ https://www.rundeck.com/open-source
 ## Start server
 ```
 # Download war
-# 第一次
+
+# First time
 nohpu java -jar rundeck-3.0.22-20190512.war &
-# 后续
-server/sbin/rundeckd
+
+export RDECK_BASE=/home/rundeck
+server/sbin/rundeckd {start|stop|restart|condrestart|status}
 ```
 
 ## Configs
-##### Change all hostname to ip (or a name can be accessed)
+##### Change all hostnames to ip (or a name can be accessed)
 ```bash
 find . -type -f |grep <hostname>
 vi server/config/rundeck-config.properties
