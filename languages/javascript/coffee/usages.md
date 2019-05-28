@@ -39,6 +39,21 @@ if 1 > 0 then console.log "1 > 0"
 if 'B' > 'A' then console.log "B > A"
 ```
 
+### Logical Operators
+- &&
+- ||
+- !
+```coffeescript
+console.log("\n[&&]")
+if 2 != 0 && 2 != 1 then console.log "2 != 0 && 2 != 1"
+
+console.log("\n[||]")
+if 1 == 0 || 1 == 1 then console.log "1 == 0 || 1 == 1"
+
+console.log("\n[!]")
+if ! (1 == 0) then console.log "! (1 == 0)"
+```
+
 ### The Existential Operator '?'
 `?` returns true unless a variable is null or undefined or undeclared.
 ```coffeescript
@@ -60,26 +75,9 @@ console.log(speed) # 0
 footprints = yeti ? "bear"
 console.log(footprints) # "bear"
 ```
-
+### TODOs
 - [ ] Chained Comparisons
 - [ ] Aliases
-
-
-
-### Logical Operators
-- &&
-- ||
-- !
-```coffeescript
-console.log("\n[&&]")
-if 2 != 0 && 2 != 1 then console.log "2 != 0 && 2 != 1"
-
-console.log("\n[||]")
-if 1 == 0 || 1 == 1 then console.log "1 == 0 || 1 == 1"
-
-console.log("\n[!]")
-if ! (1 == 0) then console.log "! (1 == 0)"
-```
 
 ## Conditions
 - if
@@ -417,4 +415,9 @@ Released under the MIT License
 
 sayFortune = (fortune) ->
   console.log fortune # in bed!
+```
+## Unit Test
+### Nodeunit
+```bash
+npm i nodeunit
 ```
