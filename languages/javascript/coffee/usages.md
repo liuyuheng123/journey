@@ -21,6 +21,7 @@ singers = {Jagger: "Rock", Elvis: "Roll"}
 
 # Workflows
 ## Operators
+https://www.tutorialspoint.com/coffeescript/coffeescript_operators_and_aliases.htm
 ### Comparison Operators
 - ==: strict comparison operator of JavaScript ===, returns true, only if both the value and datatypes of them are equal, else it returns false.
 - !=
@@ -75,9 +76,25 @@ console.log(speed) # 0
 footprints = yeti ? "bear"
 console.log(footprints) # "bear"
 ```
-### TODOs
-- [ ] Chained Comparisons
-- [ ] Aliases
+### Chained Comparisons
+```coffeescript
+score = 70
+passed = 100 > score > 40
+```
+### Aliases
+|Name                       |Operator / symbol|Aliases      |
+|---------------------------|-----------------|-------------|
+|"equals to" operator       |==               |is           |
+|"not equals to" operator   |!==              |isnt         |
+|"not" operator	            |!                |not          |
+|"and" operator	            |&&               |and          |
+|"or" operator	            |\|\|             |or           |
+|boolean value true	        |true             |true, yes, on|
+|boolean value false        |false            |off, no      |
+|new line (or) semi colon   |\n or ;          |then         |
+|Inverse of if              |! if             |unless       |
+|To test for array presence |                 |in           |
+|To test for object presence|                 |of           |
 
 ## Conditions
 - if
