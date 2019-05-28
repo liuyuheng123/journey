@@ -1,4 +1,4 @@
-# notes
+# journey
 
 ## 2019-05
 Started a ChatOps project.
