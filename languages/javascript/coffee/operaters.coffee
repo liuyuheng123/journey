@@ -35,3 +35,4 @@ console.log(speed) # 0
 
 footprints = yeti ? "bear"
 console.log(footprints) # "bear"
+

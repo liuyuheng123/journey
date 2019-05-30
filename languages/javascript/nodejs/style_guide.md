@@ -2,6 +2,8 @@ https://www.jianshu.com/p/656536ca6645
 
 https://github.com/windyrobin/iFrame/blob/master/style.md
 
+https://github.com/felixge/node-style-guide#use-uppercase-for-constants
+
 # Indent
 2 spaces
 
@@ -9,8 +11,8 @@ https://github.com/windyrobin/iFrame/blob/master/style.md
 Use single quo `''`
 
 # Names
-- 文件名: lower_underscore.coffee 
-- 函数和变量：functionNamesLikeThis, variableNamesLikeThis, 
-- 类名和枚举类型：ClassNamesLikeThis, EnumNamesLikeThis, 
-- 类方法：methodNamesLikeThis 
-- 常量：SYMBOLIC_CONSTANTS_LIKE_THIS
+- file name: lower_underscore.coffee 
+- functions and variables：functionNamesLikeThis, variableNamesLikeThis, 
+- class and enum：ClassNamesLikeThis, EnumNamesLikeThis, 
+- class method：methodNamesLikeThis 
+- const：SYMBOLIC_CONSTANTS_LIKE_THIS
