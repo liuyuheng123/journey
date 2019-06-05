@@ -6,8 +6,9 @@ Started a ChatOps project.
 - slack
 - node.js
 - coffeescript
-- TBD
-    - Softlayer API
-    - PagerDuty API
-    - Maximo Integration
-    - Rundeck Integration
+- Integration
+    - [ ] Softlayer
+    - [ ] PagerDuty
+    - [ ] Maximo
+    - [x] Rundeck
+    - [ ] local cmd (ssh call)
