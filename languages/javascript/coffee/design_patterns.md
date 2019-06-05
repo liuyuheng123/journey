@@ -32,7 +32,7 @@ module.exports = class ParentClass
     ))
 
   process: ->
-    throw Error(">>>getObjects<<<: unimplemented method")
+    throw Error(">>>process<<<: unimplemented method")
 ```
 
 Client
